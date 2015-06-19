@@ -3,7 +3,9 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'jcblog',
+    podModulePrefix: 'jcblog/pods',
     environment: environment,
+    firebase: 'https://jcblog.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -17,6 +19,16 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+  };
+
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    // 'script-src': "'self' https://cdn.mxpnl.com", // Allow scripts from https://cdn.mxpnl.com
+    'font-src': "'self' http://fonts.gstatic.com https://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+    'connect-src': "'self' *.firebaseio.com wss://s-dal5-nss-23.firebaseio.com/.ws?v=5&ns=one-am", // Allow data (ajax/websocket)
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com https://fonts.googleapis.com", // Allow inline styles and loaded CSS
+    'media-src': "'self'"
   };
 
   if (environment === 'development') {

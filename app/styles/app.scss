@@ -1,8 +1,3 @@
-$chocolate: #14080e; //rgba(20, 8, 14, 100)
-$lavender: #49475b; //rgba(73, 71, 91, 100)
-$babyblue: #799496; //rgba(121, 148, 150, 100)
-$light-green: #acc196; //rgba(172, 193, 150, 100)
-$light-yellow: #e9eb9e; //rgba(233, 235, 158, 100)
 $brown: #504836; //rgba(80, 72, 54, 100)
 $yellow: #f9e854; //rgba(249, 232, 84, 100)
 $offwhite: #f8fcda; //rgba(248, 252, 218, 100)
@@ -10,6 +5,14 @@ $turquoise: #95ede5; //rgba(149, 237, 229, 100)
 $midnight: #1b2b2f; //rgba(27, 43, 47, 100)
 $white: #fff;
 $black: #000;
+
+@mixin center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
 html,
 body,
@@ -37,7 +40,6 @@ ul {
 body {
   background: $white;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  line-height: 1;
   }
 
 .sub-outlet {
@@ -52,6 +54,7 @@ body {
   background-size: 100% 100%;
   border: 1px solid $black;
   min-height: 980px;
+  position: relative;
   width: 100%;
   }
 
@@ -61,53 +64,53 @@ body {
   font-size: 20px;
   margin: 0;
   padding: 5% 0 0;
-  position: absolute;
   text-align: center;
   width: 100%;
-  }
 
-.top-nav li {
-  display: inline-block;
-  width: 20%;
-  }
+  li {
+    display: inline-block;
+    width: 20%;
 
-.top-nav li a {
-  border-radius: 14px;
-  color: rgba(255, 255, 255, .8);
-  padding: 5px 15px;
-  text-decoration: none;
-  text-shadow: 1px 1px 2px $black;
-  transition: all .3s ease-in-out;
+    a {
+      border-radius: 14px;
+      color: rgba(255, 255, 255, .8);
+      padding: 5px 15px;
+      text-decoration: none;
+      text-shadow: 1px 1px 2px $black;
+      transition: all .3s ease-in-out;
+    }
   }
+}
 
 .top-nav a:hover,
 .top-nav a:focus {
   background-color: rgba(249, 232, 84, .10);
   color: $white;
   text-decoration: none;
-  }
+}
 
 //hero connect
-.connect ul {
-  padding: 20% 0 0 37%;
+.connect {
+  @include center;
+  overflow: auto;
 
+  li {
+    display: inline-block;
+    padding: 15px;
   }
 
-.connect li {
-  display: inline-block;
-  padding: 5%;
+  a {
+    color: rgba(255, 255, 255, .8);
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 2px 1px 2px $black;
+    transition: all .3s ease-in-out;
   }
-
-.connect a {
-  color: rgba(255, 255, 255, .8);
-  font-size: 2.5em;
-  text-align: center;
-  text-shadow: 2px 1px 2px $black;
-  transition: all .3s ease-in-out;
-  }
+}
 
 .connect a:hover,
 .connect a:focus {
   color: $white;
+  font-size: 2.75em;
   text-decoration: none;
-  }
+}

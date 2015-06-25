@@ -1,8 +1,9 @@
-$brown: #504836; //rgba(80, 72, 54, 100)
-$yellow: #f9e854; //rgba(249, 232, 84, 100)
-$offwhite: #f8fcda; //rgba(248, 252, 218, 100)
-$turquoise: #95ede5; //rgba(149, 237, 229, 100)
-$midnight: #1b2b2f; //rgba(27, 43, 47, 100)
+$brown: #504836; //rgba(80, 72, 54, 1)
+$yellow: #f9e854; //rgba(249, 232, 84, 1)
+$offwhite: #f8fcda; //rgba(248, 252, 218, 1)
+$turquoise: #95ede5; //rgba(149, 237, 229, 1)
+$midnight: #1b2b2f; //rgba(27, 43, 47, 1)
+$light-brown: #efd6c9; // rgba(239, 214, 201, 1)
 $white: #fff;
 $black: #000;
 
@@ -42,13 +43,9 @@ body {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   }
 
-.sub-outlet {
-  padding-top: 8%;
-  }
-
 .index-view {
   background-attachment: fixed;
-  background-image: url('/img/man-night-person-1473-resize.jpg');
+  background-image: url('/img/man-night-person-1473.jpg');
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -60,33 +57,36 @@ body {
 
 //navigation
 .top-nav {
+  // background-color: rgba(249, 232, 84, .10);
   float: left;
   font-size: 20px;
   margin: 0;
-  padding: 5% 0 0;
+  padding: 15px 0 0;
   text-align: center;
   width: 100%;
 
   li {
     display: inline-block;
     width: 20%;
+  }
 
-    a {
-      border-radius: 14px;
-      color: rgba(255, 255, 255, .8);
-      padding: 5px 15px;
-      text-decoration: none;
-      text-shadow: 1px 1px 2px $black;
-      transition: all .3s ease-in-out;
-    }
+  a {
+    border-radius: 14px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
   }
 }
 
-.top-nav a:hover,
-.top-nav a:focus {
+.top-nav.index a {
+  color: rgba(255, 255, 255, .8);
+  text-shadow: 1px 1px 2px $black;
+}
+
+.top-nav.index a:hover,
+.top-nav.index a:focus {
   background-color: rgba(249, 232, 84, .10);
   color: $white;
-  text-decoration: none;
 }
 
 //hero connect
@@ -113,4 +113,116 @@ body {
   color: $white;
   font-size: 2.75em;
   text-decoration: none;
+}
+
+// projects main
+.projects-index {
+  background-attachment: relative;
+  background-image: url('/img/construction-work-carpenter-tools.jpg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid $black;
+  min-height: 980px;
+  position: relative;
+  width: 100%;
+}
+
+.top-nav.projects a {
+  color: rgba(255, 255, 255, .8);
+  text-shadow: 1px 1px 2px $black;
+}
+
+.top-nav.projects a:hover,
+.top-nav.projects a:focus {
+  background-color: rgba(239, 214, 201, .1);
+  color: $white;
+}
+
+.projects.sub-outlet {
+  margin-top: 8%;
+}
+
+.projects-body {
+  background-color: rgba(30, 20, 14, .8);
+  border-radius: 10px;
+  margin-left: 50%;
+  padding: 15px;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 50%;
+
+  a,
+  p {
+    color: $white;
+    text-decoration: none;
+  }
+
+  h1 {
+    color: $white;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    color: $turquoise;
+    font-size: 1em;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+}
+
+// movies main
+.movies-index {
+  background-attachment: fixed;
+  background-image: url('/img/black-and-white-city-skyline-buildings-nyc1-1920.jpg');
+  // background-image: url('/img/dawn-bokeh.jpg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid $white;
+  min-height: 980px;
+  position: relative;
+  width: 100%;
+}
+
+.top-nav.movies a {
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.top-nav.movies a:hover,
+.top-nav.movies a:focus {
+  background-color: rgba(0, 0, 0, .5);
+  color: $white;
+}
+
+.movies.sub-outlet {
+  padding-top: 8%;
+  }
+
+.movies.main {
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 10px;
+  margin-left: 50%;
+  padding: 15px;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 30%;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  h1 {
+    color: $white;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    color: $turquoise;
+    font-size: 1em;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
 }

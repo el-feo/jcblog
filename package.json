@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "analytics-node": "1.2.2",
     "broccoli-asset-rev": "^2.0.2",
     "ember-cli": "0.2.7",
     "ember-cli-app-version": "0.3.3",
@@ -37,5 +38,8 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "liquid-fire": "0.19.4"
+  },
+  "dependencies": {
+    "analytics-node": "^1.2.2"
   }
 }

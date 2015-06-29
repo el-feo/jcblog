@@ -1,0 +1,27 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  }
+
+ul {
+  list-style: none;
+  }
+
+body {
+  background: $white;
+  font-family: $lucida-grande;
+  }

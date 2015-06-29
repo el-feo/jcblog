@@ -1,0 +1,65 @@
+// movies main
+.movies-index {
+  background: -webkit-linear-gradient(left bottom,
+              rgba(210, 209, 204, 0) 0%,
+              rgb(210, 209, 204) 100%),
+              -webkit-linear-gradient(right bottom,
+              rgba(173, 172, 167, 0) 0%,
+              rgb(173, 172, 167) 100%),
+              -webkit-linear-gradient(right top,
+              rgba(101, 100, 96, 0) 0%, rgb(101, 100, 96) 100%),
+              -webkit-linear-gradient(left top, rgba(45, 44, 42, 0) 0%,
+              rgb(45, 44, 42) 100%);
+  background-attachment: fixed;
+  background-image: url('/img/black-and-white-city-skyline-buildings-nyc1-1920.jpg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.top-nav.movies a {
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.top-nav.movies a:hover,
+.top-nav.movies a:focus {
+  background-color: rgba(0, 0, 0, .5);
+  color: $white;
+}
+
+.movies.sub-outlet {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.movies.main {
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 30px;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  h1 {
+    color: $white;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    color: $turquoise;
+    font-size: 1.25em;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+}

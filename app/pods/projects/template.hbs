@@ -3,22 +3,45 @@
   {{top-nav classNames="top-nav projects"}}
 
   <div class="projects sub-outlet">
-    <div class="projects-container">
-      <div class="projects-body">
-        <ul>
-          <li>
-            <h2>Sundance Transparency Project</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </li>
-          <li>
-            <h2>Production Sense</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </li>
-        </ul>
+    <div class="card-parent">
+      <div class="card">
+        <img src="{{transparencyImg}}">
+        <a href="http://transparency.sundance.org"><h2>Sundance Transparency Project {{fa-icon "fa-external-link"}}</h2></a>
+        <p>
+           Their goal is to collect and share current data on both revenue and expenses for independent film distribution. Working with another developer/designer, we tackled the problem by building an admin system in Ruby on Rails using available gems.  We exposed a secure API endpoint using token authentication and created an Ember app that allows the end user to change a graph of anonymous movie data in realtime. More about the project can be found in this Filmmaker Magazine article: <a href="http://bit.ly/1ClxAW6">{{fa-icon "fa-external-link"}}</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="{{prodsenseImg}}">
+        <a href="https://www.productionsense.com"><h2>Production Sense {{fa-icon "fa-external-link"}}</h2></a>
+        <p>
+          Production Sense, built using Ruby on Rails, was the result of over a year and a half of learning to code on my own. It provides purchase order management to film and television production teams. It utilizes Stripe for payments, Prawn for PDF generation, CanCan for role based authorization, Devise for authentication.  It's tested using Rspec and currently lives on Heroku servers.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="{{visualCortexImg}}">
+        <h2>Focus Features VFX DB</h2>
+        <p>
+          The "Visual Cortex" was originally built to keep track of costs on Taking Woodstock in 2008 and was iterated on through Anna Karenina in 2012. Made with Filemaker, it ingests an XML or ALE file from editorial and uses specifically formatted tags to generate a VFX list.  The list can be used to track shot status, compare cuts, and ultimately produce line-up sheets for the VFX vendors.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="{{sceneImg}}">
+        <h2>Focus Features Scene Continuity DB</h2>
+        <p>
+          The scene continuity database was our most ambitious.  It was built to keep track of film used by the camera department and combine that info with the reports from the script supervisor to generate the daily wrap report.  This is a complex document that organizes information from multiple departments and becomes part of the official production record for auditing and accounting.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="{{brainImg}}">
+        <h2>Focus Features Post DB aka "The Brain"</h2>
+        <p>
+          "The Brain" was built to keep our department of five in sync with what we had in inventory, crew contact information, material and deliverables status, and to fill out basic forms for travel to save our overworked and under appreciated post coordinator some time.
+        </p>
       </div>
     </div>
   </div>

@@ -1,0 +1,59 @@
+.index-view {
+  background: -webkit-linear-gradient(right bottom, rgba(30, 30, 30, 0) 0%,
+              rgb(30, 30, 30) 100%), -webkit-linear-gradient(left bottom,
+              rgba(60, 67, 57, 0) 0%, rgb(60, 67, 57) 100%),
+              -webkit-linear-gradient(left top, rgba(133, 105, 59, 0) 0%,
+              rgb(133, 105, 59) 100%),
+              -webkit-linear-gradient(right top, rgba(160, 143, 86, 0) 0%,
+              rgb(160, 143, 86) 100%);
+  background-attachment: fixed;
+  background-image: url('/img/man-night-person-1473.jpg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+//navigation
+.top-nav.index a {
+  color: rgba(255, 255, 255, .8);
+  text-shadow: 1px 1px 2px $black;
+}
+
+.top-nav.index a:hover,
+.top-nav.index a:focus {
+  background-color: rgba(249, 232, 84, .10);
+  color: $white;
+}
+
+//hero connect
+.connect {
+  @include center;
+  overflow: auto;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  a {
+    color: rgba(255, 255, 255, .8);
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 2px 1px 2px $black;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.connect a:hover,
+.connect a:focus {
+  color: $white;
+  font-size: 2.75em;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+@mixin center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin outline {
+  border: 1px solid red;
+}

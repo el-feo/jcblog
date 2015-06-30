@@ -15,6 +15,7 @@
   min-height: 100vh;
   position: relative;
   width: 100%;
+  // padding-top: 60px
 }
 
 .top-nav.projects a {
@@ -29,5 +30,5 @@
 }
 
 .projects.sub-outlet {
-  margin: 60px auto;
+  padding-top: 60px;
 }

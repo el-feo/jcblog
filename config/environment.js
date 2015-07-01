@@ -21,12 +21,17 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['segment'] = {
+    WRITE_KEY: '97ZiOEUKzUzILtJoZcu0cVjyFVHZpBlp',
+    LOG_EVENT_TRACKING: true
+  };
+
   ENV.contentSecurityPolicy = {
-    'default-src': "'none'",
-    // 'script-src': "'self' https://cdn.mxpnl.com", // Allow scripts from https://cdn.mxpnl.com
+    'default-src': "'none' 'self'",
+    'script-src': "'self' http://www.google-analytics.com https://cdn.mxpnl.com http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js  http://cdn.segment.com/analytics.js/v1/97ZiOEUKzUzILtJoZcu0cVjyFVHZpBlp/analytics.min.js", // Allow scripts from https://cdn.mxpnl.com
     'font-src': "'self' http://fonts.gstatic.com https://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-    'connect-src': "'self' *.firebaseio.com wss://s-dal5-nss-23.firebaseio.com/.ws?v=5&ns=one-am", // Allow data (ajax/websocket)
-    'img-src': "'self'",
+    'connect-src': "'self' http://api.segment.io/v1/p *.firebaseio.com   wss://s-dal5-nss-23.firebaseio.com/.ws?v=5&ns=one-am http://api.mixpanel.com", // Allow data (ajax/websocket)
+    'img-src': "'self' http://www.google-analytics.com",
     'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com https://fonts.googleapis.com", // Allow inline styles and loaded CSS
     'media-src': "'self'"
   };

@@ -19,7 +19,7 @@
 //navigation
 .top-nav.index a {
   color: rgba(255, 255, 255, .8);
-  text-shadow: 1px 1px 2px $black;
+  @include text-shadow;
 }
 
 .top-nav.index a:hover,
@@ -46,7 +46,7 @@
     color: rgba(255, 255, 255, .8);
     font-size: 2.5em;
     text-align: center;
-    text-shadow: 2px 1px 2px $black;
+    @include text-shadow;
     transition: all .3s ease-in-out;
   }
 }

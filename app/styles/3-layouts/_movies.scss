@@ -11,9 +11,8 @@
               -webkit-linear-gradient(left top, rgba(45, 44, 42, 0) 0%,
               rgb(45, 44, 42) 100%);
   background-attachment: fixed;
-  background-image: url('/img/black-and-white-city-skyline-buildings-nyc1-1920.jpg');
-  // background-image: url('/img/construction-work-carpenter-tools.jpg');
-  background-position: 100% 100%;
+  background-image: url('/img/black-and-white-city-skyline-buildings-nyc1_resize.jpg');
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -23,7 +22,7 @@
 
 .top-nav.movies a {
   color: rgba(0, 0, 0, 1);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  text-shadow: 2px 1px 2px gray;
 }
 
 .top-nav.movies a:hover,
@@ -50,11 +49,13 @@
   a {
     color: $white;
     text-decoration: none;
+    @include text-shadow;
   }
 
   h1 {
     color: $white;
     font-size: 1.5em;
+    @include text-shadow;
   }
 
   h2 {
@@ -62,5 +63,6 @@
     font-size: 1.25em;
     margin-left: -10px;
     margin-top: 10px;
+    @include text-shadow;
   }
 }

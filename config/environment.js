@@ -28,7 +28,7 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none' 'self'",
-    'script-src': "'self' http://www.google-analytics.com https://cdn.mxpnl.com http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js  http://cdn.segment.com/analytics.js/v1/97ZiOEUKzUzILtJoZcu0cVjyFVHZpBlp/analytics.min.js", // Allow scripts from https://cdn.mxpnl.com
+    'script-src': "'self' 'unsafe-inline' http://www.google-analytics.com https://cdn.mxpnl.com http://localhost:4200/ember-cli-live-reload.js  http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js  http://cdn.segment.com", 
     'font-src': "'self' http://fonts.gstatic.com https://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
     'connect-src': "'self' http://api.segment.io/v1/p *.firebaseio.com   wss://s-dal5-nss-23.firebaseio.com/.ws?v=5&ns=one-am http://api.mixpanel.com", // Allow data (ajax/websocket)
     'img-src': "'self' http://www.google-analytics.com",
